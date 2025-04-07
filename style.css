@@ -1,9 +1,27 @@
+:root {
+  --color-background: oklch(97.5% 0.03 83.5); /* #FAF7F0 */
+  --color-foreground: oklch(85.5% 0.04 83.5); /* #D8D2C2 */
+  --color-accent: oklch(62.5% 0.12 29.5);     /* #B17457 */
+  --color-contrast: oklch(29.5% 0.02 257.5);  /* #4A4947 */
+}
+
 body {
     font: 100%/1.5 system-ui;
     max-width: 100ch;
     margin-inline: max(1em, (100% - 100ch) / 2);
+    color: var(--color-contrast);
 }
 
+h1 {
+  font-size: 400%; 
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+/* Navigation bar */
 nav {
   display: flex;
 }
@@ -11,4 +29,70 @@ nav {
 nav a {
   flex: 1;
   text-decoration: none;
+  color: inherit;
+  text-align: center;
+  padding: 0.5em;
+  margin-bottom: 1em;
+  border-bottom: 1px solid var(--color-accent);
+}
+
+a.current {
+  border-bottom: 0.4em solid var(--color-accent);
+}
+
+nav a:hover {
+  background-color: var(--color-foreground);
+  border-bottom: 0.4em solid var(--color-accent);
+}
+
+
+
+/* Contact form */
+form * {
+  font: inherit;
+}
+
+form {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1em;
+}
+
+form label {
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-column: 1 / -1;
+}
+
+form button {
+  grid-column: 1 / -1;
+  background-color: var(--color-foreground);
+  color: var(--color-contrast);
+  border-style: none;
+  border-radius: 5px;
+}
+
+form button:hover {
+  background-color: var(--color-accent);
+  color: var(--color-foreground);
+}
+
+
+
+/* Projects */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+  gap: 1em;
+}
+
+.projects article {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 3;
+  gap: 1em;
+}
+
+.projects article h2 {
+  margin: 0;
 }
