@@ -1,0 +1,77 @@
+@import url('../style.css');
+
+/* Resume styles */
+section {
+    display: grid;
+    gap: 2em;
+    margin-top: 2em;
+}
+
+.cv-profile {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+
+
+header {
+    gap: 0.5em;
+}
+
+header h2, header h3 {
+    margin: 0;
+    color: var(--color-accent);
+}
+
+
+ul {
+    list-style-type: none;
+}
+.skills {
+    list-style-type: disc;
+    margin: 0 2em;
+}
+
+
+
+article {
+    background-color: oklch(from var(--color-foreground) 95% 5% h);
+    padding: 1.5em;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+article header {
+    margin-bottom: 0.5em;
+}
+
+article li {
+    margin-bottom: 0.5em;
+}
+
+
+
+.boxed-header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+time {
+    color: var(--color-accent);
+    font-style: italic;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    section {
+        gap: 1.5em;
+    }
+    
+    article {
+        padding: 1em;
+    }
+}

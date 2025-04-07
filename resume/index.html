@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume</title>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav>
@@ -17,10 +17,14 @@
     
     <h1>Resume</h1>
     <section>
-        <header>
-            <h2>Son Nguyen</h2>
-            <p>Data Science Student at UCSD</p>
-            <img src="../images/my_image.jpg" alt="My profile picture" style="width:150px; border-radius:50%;">
+        <header class="cv-profile">
+            <div>
+                <img src="../images/my_image.jpg" alt="My profile picture" style="width:150px; border-radius:50%;">
+            </div>
+            <div>
+                <h2>Son Nguyen</h2>
+                <p>Data Science Student at UCSD</p>
+            </div>
         </header>
         
         <header>
@@ -36,7 +40,7 @@
         <header>
             <h3>Skills</h3>
         </header>
-        <ul>
+        <ul class="skills">
             <li>Programming Languages: Python, R, SQL, JavaScript</li>
             <li>Data Analysis and Visualization: Pandas, Matplotlib, Seaborn, Tableau</li>
             <li>Machine Learning: Scikit-learn, TensorFlow, Keras</li>
@@ -46,51 +50,57 @@
         <header>
             <h3>Experience</h3>
         </header>
-        <ul>
-            <article>
-                <header>
-                    <li><strong>Data Science Intern</strong> - XYZ Company (<time datetime="2023-06">Summer 2023</time>)</li>
-                </header>
-                <ul>
-                    <li>Analyzed large datasets to identify trends and insights</li>
-                    <li>Developed predictive models to improve business decision-making</li>
-                    <li>Presented findings to stakeholders using interactive dashboards</li>
-                </ul>
-            </article>
-            <article>
-                <header>
-                    <li><strong>Research Assistant</strong> - UCSD Data Science Lab (<time datetime="2024">2024</time> - <time datetime="present">Present</time>)</li>
-                </header>
-                <ul>
-                    <li>Conducted research on machine learning algorithms for healthcare applications</li>
-                    <li>Published findings in peer-reviewed journals</li>
-                </ul>
-            </article>
-        </ul>
+        <article>
+            <header class="boxed-header">
+                <div>
+                    <strong>Data Science Intern</strong> - XYZ Company
+                </div>
+                <div>
+                    <time datetime="2023-06">Summer 2023</time>
+                </div>
+            </header>
+            <ul>
+                <li>Analyzed large datasets to identify trends and insights</li>
+                <li>Developed predictive models to improve business decision-making</li>
+                <li>Presented findings to stakeholders using interactive dashboards</li>
+            </ul>
+        </article>
+        <article>
+            <header class="boxed-header">
+                <div>
+                    <strong>Research Assistant</strong> - UCSD Data Science Lab
+                </div>
+                <div>
+                    <time datetime="2024">2024</time> - <time datetime="present">Present</time>
+                </div>
+            </header>
+            <ul>
+                <li>Conducted research on machine learning algorithms for healthcare applications</li>
+                <li>Published findings in peer-reviewed journals</li>
+            </ul>
+        </article>
         
         <header>
             <h3>Projects</h3>
         </header>
-        <ul>
-            <article>
-                <header>
-                    <li><strong>Personal Portfolio Website</strong></li>
-                </header>
-                <ul>
-                    <li>Designed and developed a responsive website to showcase projects and skills</li>
-                    <li>Utilized HTML, CSS, and JavaScript for front-end development</li>
-                </ul>
-            </article>
-            <article>
-                <header>
-                    <li><strong>Movie Recommendation System</strong></li>
-                </header>
-                <ul>
-                    <li>Built a collaborative filtering model to recommend movies based on user preferences</li>
-                    <li>Implemented using Python and Scikit-learn</li>
-                </ul>
-            </article>
-        </ul>
+        <article>
+            <header class="boxed-header">
+                <strong>Personal Portfolio Website</strong>
+            </header>
+            <ul>
+                <li>Designed and developed a responsive website to showcase projects and skills</li>
+                <li>Utilized HTML, CSS, and JavaScript for front-end development</li>
+            </ul>
+        </article>
+        <article>
+            <header class="boxed-header">
+                <strong>Movie Recommendation System</strong>
+            </header>
+            <ul>
+                <li>Built a collaborative filtering model to recommend movies based on user preferences</li>
+                <li>Implemented using Python and Scikit-learn</li>
+            </ul>
+        </article>
     </section>
 </body>
 </html>
