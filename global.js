@@ -75,6 +75,13 @@ document.addEventListener('DOMContentLoaded', function () {
         select.value = localStorage.colorScheme;
         updateDefinedColors(localStorage.colorScheme);
     }
+    else {
+        defaultTheme = 'light';
+        document.documentElement.style.setProperty('color-scheme', defaultTheme);
+        select.value = defaultTheme;
+        localStorage.colorScheme = defaultTheme;
+        updateDefinedColors(defaultTheme);
+    }
 });
 
 
