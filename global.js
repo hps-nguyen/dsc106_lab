@@ -4,6 +4,8 @@ function $$(selector, context = document) {
   return Array.from(context.querySelectorAll(selector));
 }
 
+
+
 let pages = [
     { url: '', title: 'Home' },
     { url: 'projects/', title: 'Projects' },
@@ -16,8 +18,8 @@ let nav = document.createElement('nav');
 document.body.prepend(nav);
 
 const BASE_PATH = (location.hostname === 'localhost' || location.hostname === "127.0.0.1")
-    ? '/'                                  // Local server
-    : '/hps-nguyen.github.io/dsc106_lab/'; // GitHub Pages
+    ? '/'                                         // Local server
+    : 'https://hps-nguyen.github.io/dsc106_lab/'; // GitHub Pages
 
 for (let p of pages) {
     let url = p.url;
@@ -35,6 +37,8 @@ for (let p of pages) {
     }
     nav.append(a);
 }
+
+
 
 document.body.insertAdjacentHTML(
     'afterbegin',
