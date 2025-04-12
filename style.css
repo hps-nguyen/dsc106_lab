@@ -1,9 +1,19 @@
 :root {
-  --color-background: oklch(97.5% 0.03 83.5); /* #FAF7F0 */
-  --color-foreground: oklch(85.5% 0.04 83.5); /* #D8D2C2 */
-  --color-accent: oklch(62.5% 0.12 29.5);     /* #B17457 */
-  --color-contrast: oklch(29.5% 0.02 257.5);  /* #4A4947 */
+  --color-background: oklch(97.5% 0.03 83.5);
+  --color-foreground: oklch(85.5% 0.04 83.5);
+  --color-accent: oklch(62.5% 0.12 29.5);
+  --color-contrast: oklch(29.5% 0.02 257.5);
+  color-scheme: light;
 }
+
+:root[data-theme="dark"] {
+  --color-background: oklch(20% 0.02 83.5);
+  --color-foreground: oklch(30% 0.03 83.5);
+  --color-accent: oklch(70% 0.12 29.5);
+  --color-contrast: oklch(90% 0.02 257.5);
+  color-scheme: dark;
+}
+
 
 body {
     font: 100%/1.5 system-ui;
@@ -20,6 +30,24 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.1;
   text-wrap: balance;
 }
+
+
+/* Theme (light/dark) */
+.color-scheme {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+/* For smaller window */
+@media (max-width: 1440px) { 
+  .color-scheme {
+    top: 4rem;
+    right: 1rem;
+  }
+}
+
+
 
 /* Navigation bar */
 nav {

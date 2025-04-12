@@ -4,7 +4,7 @@
 section {
     display: grid;
     gap: 2em;
-    margin-top: 2em;
+    margin: 3em 0;
 }
 
 .cv-profile {
@@ -36,7 +36,7 @@ ul {
 
 
 article {
-    background-color: oklch(from var(--color-foreground) 95% 5% h);
+    background-color: var(--color-foreground);
     padding: 1.5em;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
