@@ -13,6 +13,11 @@ section {
     gap: 1em;
 }
 
+.cv-profile img {
+    max-width: 200px;
+    border-radius: 10%;
+}
+
 
 
 header {

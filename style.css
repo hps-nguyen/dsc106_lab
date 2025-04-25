@@ -75,6 +75,24 @@ nav a:hover {
 
 
 
+/* Introduction */
+#introduction {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  margin-bottom: 3em;
+}
+
+#introduction img {
+  max-width: 200px;
+  margin-right: 1em;
+}
+
+#introduction img, #introduction p {
+  grid-row: auto;
+}
+
+
+
 /* Contact form */
 form * {
   font: inherit;
@@ -123,4 +141,43 @@ form button:hover {
 
 .projects article h2 {
   margin: 0;
+}
+
+
+
+/* Profile stats */
+#profile-stats {
+  margin-bottom: 4em;
+}
+
+#profile-stats dl {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 1fr);
+}
+#profile-stats dt {
+  grid-row: 1;
+  font-size: 90%;
+  font-family: "Roboto Mono", "Source Code Pro", "IBM Plex Mono", monospace;
+}
+
+#profile-stats dd {
+  grid-row: 2;
+  margin: 0;
+  text-align: left;
+  font-size: 200%;
+  font-family: "Fira Code", "Consolas", monospace;
+}
+
+@media (max-width: 450px) { 
+  #profile-stats dl {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  #profile-stats dt, #profile-stats dd {
+    grid-row: auto;
+  }
+  #profile-stats dt {
+    margin: auto 0 auto 2em;
+    text-align: left;
+  }
 }
