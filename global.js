@@ -40,6 +40,17 @@ for (let p of pages) {
 
 
 
+let head = document.querySelector('head');
+head.insertAdjacentHTML(
+    'beforeend',
+    `
+        <link rel="apple-touch-icon" sizes="180x180" href="${BASE_PATH}images/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="${BASE_PATH}images/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="${BASE_PATH}images/favicon/favicon-16x16.png">
+    `
+);
+
+
 document.body.insertAdjacentHTML(
     'afterbegin',
     `
