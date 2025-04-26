@@ -79,7 +79,7 @@ nav a:hover {
 #introduction {
   display: grid;
   grid-template-columns: auto 1fr;
-  margin-bottom: 3em;
+  margin-bottom: 5em;
 }
 
 #introduction img {
@@ -141,6 +141,21 @@ form button:hover {
 
 .projects article h2 {
   margin: 0;
+}
+
+.projects article img {
+  max-width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: center;
+}
+
+.projects article time {
+  font-size: 80%;
+  font-family: "Roboto Mono", "Source Code Pro", "IBM Plex Mono", monospace;
+  text-align: right;
+  margin-bottom: 0.5em;
+  color: var(--color-accent);
 }
 
 

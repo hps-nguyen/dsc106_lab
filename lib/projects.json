@@ -1,62 +1,74 @@
 [
     {
-        "title": "Lorem ipsum dolor sit.",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis a magni possimus eveniet, facere at voluptatem officiis cumque sed. Animi, alias perspiciatis! Cumque at eaque voluptatibus facere iure aliquid cum."
+        "title": "Time Series Forecasting for Stock Prices",
+        "year": 2025,
+        "image": "https://images.unsplash.com/photo-1745270917331-787c80129680?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHN0b2NrJTIwcHJpY2VzfGVufDB8fDB8fHww",
+        "description": "Implemented ARIMA and LSTM models to forecast stock prices. Compared model performance and achieved a mean absolute error of 2.3% on the validation set."
     },
     {
-        "title": "Saepe quaerat enim voluptas.",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Hic iste eos, accusantium cumque consequatur quaerat sit! Consectetur error atque tenetur quam nemo harum ut suscipit reiciendis ea quae! Possimus, hic magnam autem accusantium voluptatem veniam odio error velit."
+        "title": "Fraud Detection with Anomaly Detection Techniques",
+        "year": 2025,
+        "image": "https://images.unsplash.com/photo-1586265900361-d42883b6c101?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzB8fGZyYXVkJTIwZGV0ZWN0aW9uJTIwbWFnbmlmaWVyfGVufDB8fDB8fHww",
+        "description": "Developed an anomaly detection system to identify fraudulent transactions in financial data. Used Isolation Forest and Autoencoders to detect anomalies with high precision."
     },
     {
-        "title": "Temporibus molestiae corrupti placeat.",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Dolor, consequuntur rerum? Molestias rem saepe doloremque non officia culpa eius ipsum magni repellat esse laudantium omnis reprehenderit laborum deserunt illum consectetur, debitis dolorum aut atque quam quisquam, maiores numquam!"
+        "title": "Natural Language Processing for Chatbots",
+        "year": 2025,
+        "image": "https://plus.unsplash.com/premium_photo-1681208068652-f3d8e1e52005?q=80&w=3144&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "description": "Created a chatbot using Rasa and spaCy for customer support. Integrated intent recognition and entity extraction to handle user queries effectively."
     },
     {
-        "title": "Voluptatum nihil facere ullam.",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Commodi eum dolorum ipsa obcaecati eaque totam, explicabo laborum iste unde, reprehenderit vel libero aspernatur aliquid nesciunt modi voluptates ullam nisi odio adipisci dolorem autem! Harum ut culpa optio vel?"
+        "title": "Predicting Housing Prices with Machine Learning",
+        "year": 2022,
+        "image": "https://images.unsplash.com/photo-1743486780771-afd09eea3624?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "description": "Developed a regression model using Python and Scikit-learn to predict housing prices based on features such as location, size, and amenities. Achieved an R² score of 0.89 on the test set."
     },
     {
-        "title": "Culpa, ipsum! Autem, reiciendis.",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Porro amet quisquam aut alias optio esse illum et tempore dolorem sapiente tenetur, voluptatem quam perspiciatis, nisi quod quidem asperiores ipsam repellendus molestias? A vitae suscipit, omnis velit nulla hic."
+        "title": "Sentiment Analysis on Twitter Data",
+        "year": 2022,
+        "image": "https://plus.unsplash.com/premium_photo-1683865775849-b958669dca26?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y3VzdG9tZXIlMjBjbHVzdGVyaW5nfGVufDB8fDB8fHww",
+        "description": "Built a natural language processing pipeline to classify tweets as positive, negative, or neutral. Used NLTK and TensorFlow to preprocess text and train a neural network model."
     },
     {
-        "title": "Minima quo aut eveniet.",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Voluptatibus consequatur aliquam autem suscipit eaque nulla ex perspiciatis laboriosam porro eveniet! Alias sunt labore magni ipsa molestiae sequi repellat reiciendis totam natus. Ratione laudantium quidem in quod ipsa iste?"
+        "title": "Real-Time Object Detection with YOLOv5",
+        "year": 2024,
+        "image": "https://upload.wikimedia.org/wikipedia/commons/3/38/Detected-with-YOLO--Schreibtisch-mit-Objekten.jpg",
+        "description": "Implemented a real-time object detection system using YOLOv5. Deployed the model on a webcam feed to detect and classify objects with high accuracy."
     },
     {
-        "title": "Laudantium hic ullam dolorem.",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Assumenda ullam quod consectetur quisquam doloribus delectus illum, accusantium repellat quae atque odit iure ducimus nobis quas possimus quis nesciunt esse eius. Quam, cupiditate. Corporis repudiandae architecto esse dolorem necessitatibus."
+        "title": "Customer Segmentation with K-Means Clustering",
+        "year": 2022,
+        "image": "https://images.unsplash.com/photo-1705635824672-b95dea152069?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzV8fGN1c3RvbWVyJTIwY2x1c3RlcmluZ3xlbnwwfHwwfHx8MA%3D%3D",
+        "description": "Performed customer segmentation for a retail dataset using K-Means clustering. Visualized clusters with Matplotlib and provided actionable insights for targeted marketing strategies."
     },
     {
-        "title": "Eos cum repellendus totam.",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Quos, reprehenderit amet! Dolorum voluptatem molestias, alias tempore culpa, sapiente aperiam rerum perferendis asperiores accusamus laborum nesciunt deleniti, natus veniam iure placeat perspiciatis ipsum quae architecto voluptatibus laboriosam cumque quas!"
+        "title": "Image Classification with Convolutional Neural Networks",
+        "year": 2023,
+        "image": "https://live.staticflickr.com/3302/3444297111_2a03e60a42_b.jpg",
+        "description": "Trained a CNN using TensorFlow to classify images from the CIFAR-10 dataset. Achieved 85% accuracy on the test set and optimized the model using data augmentation techniques."
     },
     {
-        "title": "Quo perspiciatis quas recusandae.",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Maiores consectetur at harum, repellendus fugiat repellat necessitatibus, totam repudiandae voluptate amet ullam? At ipsam soluta magni dolor facere doloribus, quaerat ipsum provident aspernatur sint dicta unde laudantium, reprehenderit nihil."
+        "title": "Recommender System for E-Commerce",
+        "year": 2023,
+        "image": "https://plus.unsplash.com/premium_photo-1738894549244-cb88c55f7784?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "description": "Built a collaborative filtering-based recommender system for an e-commerce platform. Used user-item interaction data to suggest personalized product recommendations."
     },
     {
-        "title": "Quos voluptatum nisi eveniet.",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Possimus ad labore deleniti nobis? Dicta eligendi totam, illo voluptatum qui dolorem dolore, cum quia quisquam aut nobis, magni excepturi? Animi cumque nobis dicta enim, ea fugiat! Accusamus, animi vel?"
+        "title": "Optimizing Supply Chain with Linear Programming",
+        "year": 2024,
+        "image": "https://plus.unsplash.com/premium_photo-1681487963628-1a9298789518?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c3VwcGx5JTIwY2hhaW58ZW58MHx8MHx8fDA%3D",
+        "description": "Applied linear programming techniques to optimize supply chain logistics. Minimized transportation costs while meeting demand constraints across multiple warehouses."
     },
     {
-        "title": "Eligendi iusto distinctio enim.",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Officia aliquid voluptatum accusantium aliquam cumque amet consequuntur, a possimus. Deleniti quam magnam est exercitationem! Esse corporis ad vero nemo dolores architecto et libero modi voluptatum, veniam nesciunt praesentium doloremque?"
+        "title": "Predictive Maintenance with IoT Sensor Data",
+        "year": 2023,
+        "image": "https://images.unsplash.com/photo-1645152981706-50ad7d304e9b?q=80&w=3133&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "description": "Analyzed IoT sensor data to predict equipment failures. Used Random Forest and Gradient Boosting models to reduce downtime and improve operational efficiency."
     },
     {
-        "title": "Quidem officiis quas animi?",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Incidunt cupiditate laudantium nihil quo quam officia voluptatum, consequatur doloribus hic? Inventore deleniti quam molestias recusandae obcaecati pariatur nostrum ab consequuntur labore odit perferendis voluptatibus porro, nesciunt laborum corporis asperiores?"
+        "title": "Generative Adversarial Networks for Image Synthesis",
+        "year": 2024,
+        "image": "https://plus.unsplash.com/premium_photo-1726463947986-eab8ec07b68e?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YWklMjBnZW5lcmF0aXZlJTIwaW1hZ2V8ZW58MHx8MHx8fDA%3D",
+        "description": "Trained a GAN to generate realistic images from noise. Experimented with DCGAN and StyleGAN architectures to improve image quality and diversity."
     }
 ]
