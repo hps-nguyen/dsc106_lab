@@ -19,6 +19,7 @@ body {
     font: 100%/1.5 system-ui;
     max-width: 100ch;
     margin-inline: max(1em, (100% - 100ch) / 2);
+    background-color: var(--color-background);
     color: var(--color-contrast);
 }
 
@@ -142,7 +143,7 @@ form button:hover {
 
 .projects article h2, .projects article h3 {
   margin: 0;
-  color: oklch(from var(--color-accent) 50% 5% h);;
+  color: oklch(from var(--color-accent) 50% 5% h);
 }
 
 .projects article img {
@@ -202,4 +203,89 @@ form button:hover {
     margin: auto 0 auto 2em;
     text-align: left;
   }
+}
+
+
+
+/* Projects plot */
+.container {
+  display: flex;
+  align-items: center;
+  margin-block: 2em;
+  gap: 1.5em;
+}
+
+#projects-pie-plot {
+  max-width: 20em;
+}
+
+.legend {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
+  background-color: var(--color-foreground);
+  color: var(--color-contrast);
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+  padding-block: 1em;
+}
+
+.legend li {
+  display: flex;
+  align-items: center;
+  font-size: small;
+  gap: 0.2em;
+}
+
+.swatch {
+  width: 1em;
+  height: 1em;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+}
+
+&:has(path:hover) {
+  path:not(:hover) {
+    opacity: 0.5;
+  }
+  path {
+    transition: 300ms;
+    cursor: pointer;
+  }
+}
+
+.selected-path {
+  --color: var(--color-accent) !important;
+
+  &:is(path) {
+    fill: var(--color);
+    cursor: pointer;
+  }
+  .swatch {
+    background-color: var(--color) !important;
+    width: 1.5em;
+    height: 1.5em;
+    transition: 300ms;
+  }
+}
+
+
+
+/* Search projects */
+.searchBar {
+  display: block;
+  font-size: larger;
+  width: 100%;
+  padding: 0.5em;
+  border: 1px solid var(--color-contrast);
+  border-radius: 5px;
+  margin-bottom: 2em;
+}
+.searchBar:focus {
+  outline: none;
+  color: var(--color-contrast);
+  border-color: var(--color-accent);
+}
+.searchBar::placeholder {
+  color: var(--color-contrast);
+  opacity: 0.5;
 }
