@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Project 2 Report</title>
+    <style>
+      :root {
+        --color-neutral-95: hsl(220 10% 95%);
+        --color-neutral-90: hsl(220 10% 90%);
+        --color-neutral-80: hsl(220 10% 80%);
+        --color-neutral-70: hsl(220 10% 70%);
+        --color-neutral-60: hsl(220 10% 60%);
+        --color-neutral-50: hsl(220 10% 50%);
+        --color-neutral-40: hsl(220 10% 40%);
+        --color-neutral-30: hsl(220 10% 30%);
+        --color-neutral-20: hsl(220 10% 20%);
+        --color-neutral-10: hsl(220 10% 10%);
+      }
+
+      html {
+        font: 100%/1.5 system-ui;
+        counter-reset: figure;
+        background: var(--color-neutral-95);
+        max-width: min(75vw, 80em);
+        margin: 0 auto;
+      }
+
+      /* Headings */
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        line-height: 1.1;
+        font-weight: 600;
+        text-wrap: balance;
+      }
+
+      h1,
+      h2 {
+        border-bottom: 1px solid var(--color-neutral-80);
+        padding-bottom: 0.2em;
+      }
+
+      h1 {
+        margin-block: 1em 0.5rem;
+        font-size: clamp(2.5em, 150% + 2vh + 2vw, 10vmin);
+        font-weight: 800;
+
+        small {
+          display: block;
+          width: fit-content;
+          padding: 0.2em 0.5em;
+          margin-inline: auto;
+          color: white;
+          background: var(--color-neutral-40);
+          font-size: 40%;
+          text-transform: uppercase;
+          white-space: nowrap;
+        }
+      }
+
+      h2 {
+        font-size: 180%;
+        color: var(--color-neutral-30);
+      }
+
+      h3 {
+        font-size: 130%;
+      }
+
+      /* Lists */
+
+      ul,
+      ol {
+        padding-inline-start: 2em;
+      }
+
+      li {
+        &::marker {
+          color: var(--color-neutral-40);
+        }
+
+        + li {
+          margin-top: 0.2em;
+        }
+      }
+
+      /* Sectioning elements */
+
+      header {
+        padding-block: 1em;
+        text-align: center;
+      }
+
+      main {
+        background: white;
+        color: var(--color-neutral-20);
+        border-radius: 1rem;
+        padding: 0.1rem 2rem;
+      }
+
+      /* Figures */
+
+      figure {
+        margin: 1em 0;
+        padding: 0.5rem;
+        margin-inline: -0.5em;
+        border: 1px solid var(--color-neutral-80);
+        box-shadow: 0 0.1em 0.2em var(--color-neutral-95);
+        text-align: center;
+        background: white;
+
+        > figcaption {
+          font: 500 75% var(--font-sans);
+          background: var(--color-neutral-95);
+          padding: 0.5rem;
+          margin: -0.5rem;
+          margin-top: 0.5rem;
+          counter-increment: figure;
+          text-align: left;
+
+          &::before {
+            content: 'Figure ' counter(figure) ': ';
+            font-weight: bold;
+            color: var(--color-neutral-40);
+          }
+
+          a:not(:hover, :focus, :active) {
+            color: inherit;
+            text-decoration: underline;
+            text-decoration-color: color-mix(
+              in lab,
+              currentColor,
+              transparent 70%
+            );
+          }
+        }
+      }
+    </style>
+    <script src="../global.js" type="module"></script>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>
+        <small>Project 2</small>
+        Persuasive or Deceptive Visualization?
+      </h1>
+
+      <p><strong>Son Nguyen</strong> — <em>hpn005@ucsd.edu</em></p>
+    </header>
+
+    <main>
+      <h2>Proposition: The atmospheric CO₂ concentration has been consistently increasing through years since the 1960s.</h2>
+
+      <section>
+        <h3>FOR the Proposition</h3>
+
+        <figure>
+          <img src="proposition.png" alt="Proposition Plot" style="width: 85%;" />
+          <figcaption>
+            Monthly atmospheric CO₂ concentration data from 1958 onward shown as individual scatter points. A fitted trend curve is overlaid and colored according to its rate of change over time.
+          </figcaption>
+        </figure>
+
+        <p>Design Decisions and Rationale:</p>
+
+        <ul>
+          <li>
+            Used parts per million (ppm) as the unit, which aligns with how atmospheric CO₂ is tracked and communicated in environmental science, making the upward trend both technically accurate and rhetorically impactful. (Score: +2)
+          </li>
+          <li>
+            Displayed every monthly measurement as a semi-transparent point, visually reinforcing the consistent rise and eliminating ambiguity introduced by aggregation. (Score: +2)
+          </li>
+          <li>
+            Fitted a 2-degree polynomial curve and mapped its slope to a color gradient (Wistia), allowing rate of change to be conveyed visually without text or annotation. (Score: +1.5)
+          </li>
+          <li>
+            Chose a narrow y-axis range and taller vertical aspect ratio to amplify the perceived steepness of the rise and highlight recent acceleration. (Score: +1.5)
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>AGAINST the Proposition</h3>
+
+        <figure>
+          <img src="opposition.png" alt="Opposition Plot" style="width:  100%;" />
+          <figcaption>
+            Atmospheric CO₂ percent concentration plotted over time with shaded ranges indicating minimum and maximum values. A histogram of all concentration values is displayed alongside.
+          </figcaption>
+        </figure>
+
+        <p>Design Decisions and Rationale:</p>
+
+        <ul>
+          <li>
+            Used percent instead of ppm to reduce numerical range and flatten visual trends, making atmospheric change appear negligible. (Score: -1.5)
+          </li>
+          <li>
+            Aggregated values by decade and plotted a mean line, hiding annual and seasonal patterns that might suggest recent acceleration. (Score: -1.5)
+          </li>
+          <li>
+            Shaded the area between min and max per decade to suggest stability and minimize perceived variation. (Score: -1)
+          </li>
+          <li>
+            Stretched the x-axis and set a wide y-axis range (-0.4% to 1.5%), making the line visually flat even if the underlying trend is upward. (Score: -1)
+          </li>
+          <li>
+            Added a histogram of all CO₂ percent values with exactly 9 bins, chosen to center the visual weight around stable, mid-range values and obscure recent highs. (Score: -0.5)
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Final Reflection</h2>
+
+        <p>In this project, I explored how visualizations can be leveraged to either persuasively highlight a trend or deceptively downplay it, using atmospheric CO₂ concentration data from the IMF dataset. The proposition I developed and supported through visualization was: "The atmospheric CO₂ concentration has been consistently increasing through years since the 1960s." Conversely, I created an opposing visualization to support the idea that "The atmospheric CO₂ concentration has been generally stable and shows no significant increase since the 1960s."</p>
+        <p>The persuasive visualization required several thoughtful design choices. I transformed the year and month information into a continuous scale (e.g., 1958M03 becomes 1958.25), enabling a high-resolution time series scatter plot. Each monthly CO₂ measurement was plotted as a grey dot to emphasize consistency and density. A degree-2 polynomial curve was then fitted to these points, and its slope (rate of change) was mapped to a color gradient using the Wistia colormap. This gradient not only showed the trend but also visually implied increasing urgency. The vertical aspect ratio and y-axis scaling were carefully chosen to further accentuate the upward curve.</p>
+        <p>For the deceptive visualization, I intentionally adopted design tactics that made the CO₂ trend appear flatter and less urgent. I aggregated the percent concentration data by decade and plotted the mean value with a shaded min-max band. This smoothing strategy hid finer-grained seasonal or yearly increases. To further suppress the appearance of growth, I used a y-axis that ranged from -0.4% to 1.5% — much broader than necessary for the dataset — which flattened any visual slope. Additionally, I included a horizontal histogram to the right of the line plot with a specifically chosen bin count (9 bins), visually centering the distribution around a small range of values to emphasize the CO₂  concentration stability. Together, these decisions diminished the apparent variability in the data, misleadingly implying that CO₂ levels have been stable over time.</p>
+        <p>This project helped me recognize that even truthful data can be presented in ways that influence perception depending on how it's framed. Ethical visualization design is not only about accurate plotting but also about being transparent with transformation choices, axis scales, encodings, and annotations. Persuasion through visualization is not inherently unethical, but the line between ethical persuasion and outright deception is defined by subtle choices: are we helping viewers see what the data means, or are we hiding something for rhetorical gain? My takeaway is that ethical visualization must anticipate not just what is shown, but what is implied — and ensure that implications are aligned with the truth the data can support.</p>
+      </section>
+    </main>
+  </body>
+</html>
