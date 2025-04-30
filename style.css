@@ -43,8 +43,18 @@ h1, h2, h3, h4, h5, h6 {
 /* For smaller window */
 @media (max-width: 1440px) { 
   .color-scheme {
-    top: 4rem;
+    top: 3.5rem;
     right: 1rem;
+  }
+}
+@media (max-width: 450px) { 
+  .color-scheme {
+    font-size: 80%;
+    top: 3rem;
+    right: 1rem;
+  }
+  .color-scheme select {
+    font-size: 80%;
   }
 }
 
@@ -53,6 +63,8 @@ h1, h2, h3, h4, h5, h6 {
 /* Navigation bar */
 nav {
   display: flex;
+  flex-wrap: nowrap; /* Prevent wrapping */
+  justify-content: space-between;
 }
 
 nav a {
@@ -63,8 +75,10 @@ nav a {
   padding: 0.5em;
   margin-bottom: 1em;
   border-bottom: 1px solid var(--color-accent);
+  font-size: 0.9em; /* Reduce font size for narrow screens */
 }
 
+/* Highlight the current page */
 a.current {
   border-bottom: 0.4em solid var(--color-accent);
 }
@@ -72,6 +86,14 @@ a.current {
 nav a:hover {
   background-color: var(--color-foreground);
   border-bottom: 0.4em solid var(--color-accent);
+}
+
+/* Responsive navigation for narrow screens */
+@media (max-width: 450px) {
+  nav a {
+    padding: 0.3em;
+    font-size: 80%;
+  }
 }
 
 
