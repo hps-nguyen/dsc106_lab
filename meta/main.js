@@ -116,8 +116,8 @@ function renderScatterPlot(data, commits) {
     // Create the axes
     const xAxis = d3.axisBottom(xScale);
     const yAxis = d3
-    .axisLeft(yScale)
-    .tickFormat((d) => String(d % 24).padStart(2, '0') + ':00');   
+        .axisLeft(yScale)
+        .tickFormat((d) => String(d % 24).padStart(2, '0') + ':00');
     // Add X axis
     svg
         .append('g')
@@ -179,27 +179,27 @@ function renderScatterPlot(data, commits) {
 
 
 function renderTooltipContent(commit) {
-  const link = document.getElementById('commit-link');
-  const date = document.getElementById('commit-date');
+    const link = document.getElementById('commit-link');
+    const date = document.getElementById('commit-date');
 
-  if (Object.keys(commit).length === 0) return;
+    if (Object.keys(commit).length === 0) return;
 
-  link.href = commit.url;
-  link.textContent = commit.id;
-  date.textContent = commit.datetime?.toLocaleString('en', {
-    dateStyle: 'full',
-  });
+    link.href = commit.url;
+    link.textContent = commit.id;
+    date.textContent = commit.datetime?.toLocaleString('en', {
+        dateStyle: 'full',
+    });
 }
 
 function updateTooltipVisibility(isVisible) {
-  const tooltip = document.getElementById('commit-tooltip');
-  tooltip.hidden = !isVisible;
+    const tooltip = document.getElementById('commit-tooltip');
+    tooltip.hidden = !isVisible;
 }
 
 function updateTooltipPosition(event) {
-  const tooltip = document.getElementById('commit-tooltip');
-  tooltip.style.left = `${event.clientX + 15}px`;
-  tooltip.style.top = `${event.clientY + 15}px`;
+    const tooltip = document.getElementById('commit-tooltip');
+    tooltip.style.left = `${event.clientX + 15}px`;
+    tooltip.style.top = `${event.clientY + 15}px`;
 }
 
 
@@ -222,61 +222,60 @@ function isCommitSelected(selection, commit) {
         return false;
     }
 
-    const [x0, x1] = selection.map((d) => d[0]); 
-    const [y0, y1] = selection.map((d) => d[1]); 
+    const [x0, x1] = selection.map((d) => d[0]);
+    const [y0, y1] = selection.map((d) => d[1]);
 
-    const x = xScale(commit.datetime); 
-    const y = yScale(commit.hourFrac); 
+    const x = xScale(commit.datetime);
+    const y = yScale(commit.hourFrac);
 
-    return x >= x0 && x <= x1 && y >= y0 && y <= y1; 
+    return x >= x0 && x <= x1 && y >= y0 && y <= y1;
 }
 
 function renderSelectionCount(selection) {
-  const selectedCommits = selection
-    ? commits.filter((d) => isCommitSelected(selection, d))
-    : [];
+    const selectedCommits = selection
+        ? commits.filter((d) => isCommitSelected(selection, d))
+        : [];
 
-  const countElement = document.querySelector('#selection-count');
-  countElement.textContent = `${
-    selectedCommits.length || 'No'
-  } commits selected`;
+    const countElement = document.querySelector('#selection-count');
+    countElement.textContent = `${selectedCommits.length || 'No'
+        } commits selected`;
 
-  return selectedCommits;
+    return selectedCommits;
 }
 
 
 function renderLanguageBreakdown(selection) {
-  const selectedCommits = selection
-    ? commits.filter((d) => isCommitSelected(selection, d))
-    : [];
-  const container = document.getElementById('language-breakdown');
+    const selectedCommits = selection
+        ? commits.filter((d) => isCommitSelected(selection, d))
+        : [];
+    const container = document.getElementById('language-breakdown');
 
-  if (selectedCommits.length === 0) {
+    if (selectedCommits.length === 0) {
+        container.innerHTML = '';
+        return;
+    }
+    const requiredCommits = selectedCommits.length ? selectedCommits : commits;
+    const lines = requiredCommits.flatMap((d) => d.lines);
+
+    // Use d3.rollup to count lines per language
+    const breakdown = d3.rollup(
+        lines,
+        (v) => v.length,
+        (d) => d.type,
+    );
+
+    // Update DOM with breakdown
     container.innerHTML = '';
-    return;
-  }
-  const requiredCommits = selectedCommits.length ? selectedCommits : commits;
-  const lines = requiredCommits.flatMap((d) => d.lines);
 
-  // Use d3.rollup to count lines per language
-  const breakdown = d3.rollup(
-    lines,
-    (v) => v.length,
-    (d) => d.type,
-  );
+    for (const [language, count] of breakdown) {
+        const proportion = count / lines.length;
+        const formatted = d3.format('.1~%')(proportion);
 
-  // Update DOM with breakdown
-  container.innerHTML = '';
-
-  for (const [language, count] of breakdown) {
-    const proportion = count / lines.length;
-    const formatted = d3.format('.1~%')(proportion);
-
-    container.innerHTML += `
+        container.innerHTML += `
             <dt>${language.toUpperCase()}</dt>
             <dd>${count} lines (${formatted})</dd>
         `;
-  }
+    }
 }
 
 

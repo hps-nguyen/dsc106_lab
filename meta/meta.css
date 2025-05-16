@@ -9,6 +9,7 @@ dl.stats {
     display: grid;
     grid-template-columns: repeat(auto-fill, 1fr);
 }
+
 .stats dt {
     grid-row: 1;
     font-size: 80%;
@@ -24,14 +25,17 @@ dl.stats {
     color: var(--color-accent);
 }
 
-@media (max-width: 450px) { 
+@media (max-width: 450px) {
     dl.stats {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
-    .stats dt, .stats dd {
+
+    .stats dt,
+    .stats dd {
         grid-row: auto;
     }
+
     .stats dt {
         margin: auto 0 auto 2em;
         text-align: left;
@@ -63,8 +67,8 @@ dl.info {
 }
 
 dl.info[hidden]:not(:hover, :focus-within) {
-  opacity: 0;
-  visibility: hidden;
+    opacity: 0;
+    visibility: hidden;
 }
 
 dl.info dt {
@@ -84,44 +88,45 @@ dl.info dd {
 .tooltip {
     position: fixed;
     top: 1em;
-    background-color: rgba(255, 255, 255, 0.6); 
-    border: 0.5px solid rgba(0, 0, 0, 0.5); 
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 0.5px solid rgba(0, 0, 0, 0.5);
     border-radius: 5px;
     padding: 0.5em;
-    box-shadow: 0 0.4em 0.4em rgba(0, 0, 0, 0.2); 
+    box-shadow: 0 0.4em 0.4em rgba(0, 0, 0, 0.2);
     z-index: 1000;
 }
 
 
 /* Scatter points */
 circle {
-  transition: 200ms;
-  transform-origin: center;
-  transform-box: fill-box;
+    transition: 200ms;
+    transform-origin: center;
+    transform-box: fill-box;
 }
 
 circle:hover {
-  transform: scale(1.5);
+    transform: scale(1.5);
 }
 
 
 /* Brush */
 @keyframes marching-ants {
-  to {
-    stroke-dashoffset: -8; /* 5 + 3 */
-  }
+    to {
+        stroke-dashoffset: -8;
+        /* 5 + 3 */
+    }
 }
 
 .selection {
-  fill-opacity: 0.1;
-  stroke: black;
-  stroke-opacity: 0.7;
-  stroke-dasharray: 5 3;
-  animation: marching-ants 2s linear infinite;
+    fill-opacity: 0.1;
+    stroke: black;
+    stroke-opacity: 0.7;
+    stroke-dasharray: 5 3;
+    animation: marching-ants 2s linear infinite;
 }
 
 circle.selected {
-  fill: var(--color-accent);
+    fill: var(--color-accent);
 }
 
 

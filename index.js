@@ -9,7 +9,7 @@ renderProjects(latestProjects, projectsContainer, 'h3');
 const githubData = await fetchGithubData('hps-nguyen');
 const profileStats = document.querySelector('#profile-stats');
 if (profileStats) {
-    profileStats.innerHTML = `
+  profileStats.innerHTML = `
           <dl>
             <dt>Followers</dt><dd>${githubData.followers}</dd>
             <dt>Following</dt><dd>${githubData.following}</dd>

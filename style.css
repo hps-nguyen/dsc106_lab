@@ -16,18 +16,23 @@
 
 
 body {
-    font: 100%/1.5 system-ui;
-    max-width: 100ch;
-    margin-inline: max(1em, (100% - 100ch) / 2);
-    background-color: var(--color-background);
-    color: var(--color-contrast);
+  font: 100%/1.5 system-ui;
+  max-width: 100ch;
+  margin-inline: max(1em, (100% - 100ch) / 2);
+  background-color: var(--color-background);
+  color: var(--color-contrast);
 }
 
 h1 {
-  font-size: 400%; 
+  font-size: 400%;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   line-height: 1.1;
   text-wrap: balance;
 }
@@ -41,18 +46,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* For smaller window */
-@media (max-width: 1440px) { 
+@media (max-width: 1440px) {
   .color-scheme {
     top: 3.5rem;
     right: 1rem;
   }
 }
-@media (max-width: 450px) { 
+
+@media (max-width: 450px) {
   .color-scheme {
     font-size: 80%;
     top: 3rem;
     right: 1rem;
   }
+
   .color-scheme select {
     font-size: 80%;
   }
@@ -63,7 +70,8 @@ h1, h2, h3, h4, h5, h6 {
 /* Navigation bar */
 nav {
   display: flex;
-  flex-wrap: nowrap; /* Prevent wrapping */
+  flex-wrap: nowrap;
+  /* Prevent wrapping */
   justify-content: space-between;
 }
 
@@ -75,7 +83,8 @@ nav a {
   padding: 0.5em;
   margin-bottom: 1em;
   border-bottom: 1px solid var(--color-accent);
-  font-size: 0.9em; /* Reduce font size for narrow screens */
+  font-size: 0.9em;
+  /* Reduce font size for narrow screens */
 }
 
 /* Highlight the current page */
@@ -110,7 +119,8 @@ nav a:hover {
   margin-right: 1em;
 }
 
-#introduction img, #introduction p {
+#introduction img,
+#introduction p {
   grid-row: auto;
 }
 
@@ -163,7 +173,8 @@ form button:hover {
   gap: 1em;
 }
 
-.projects article h2, .projects article h3 {
+.projects article h2,
+.projects article h3 {
   margin: 0;
   color: oklch(from var(--color-accent) 50% 5% h);
 }
@@ -173,7 +184,9 @@ form button:hover {
 }
 
 .projects a:hover {
-  h2, h3 {
+
+  h2,
+  h3 {
     color: var(--color-accent);
   }
 }
@@ -208,6 +221,7 @@ form button:hover {
   display: grid;
   grid-template-columns: repeat(auto-fill, 1fr);
 }
+
 #profile-stats dt {
   grid-row: 1;
   font-size: 90%;
@@ -223,14 +237,17 @@ form button:hover {
   color: var(--color-accent);
 }
 
-@media (max-width: 450px) { 
+@media (max-width: 450px) {
   #profile-stats dl {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
-  #profile-stats dt, #profile-stats dd {
+
+  #profile-stats dt,
+  #profile-stats dd {
     grid-row: auto;
   }
+
   #profile-stats dt {
     margin: auto 0 auto 2em;
     text-align: left;
@@ -279,6 +296,7 @@ form button:hover {
   path:not(:hover) {
     opacity: 0.5;
   }
+
   path {
     transition: 300ms;
     cursor: pointer;
@@ -292,6 +310,7 @@ form button:hover {
     fill: var(--color);
     cursor: pointer;
   }
+
   .swatch {
     background-color: var(--color) !important;
     width: 1.5em;
@@ -312,11 +331,13 @@ form button:hover {
   border-radius: 5px;
   margin-bottom: 2em;
 }
+
 .searchBar:focus {
   outline: none;
   color: var(--color-contrast);
   border-color: var(--color-accent);
 }
+
 .searchBar::placeholder {
   color: var(--color-contrast);
   opacity: 0.5;

@@ -8,10 +8,10 @@ const projectsContainer = document.querySelector('.projects');
 renderProjects(projects, projectsContainer, 'h3');
 
 const projectsTitle = document.querySelector('.projects-title');
-projectsTitle && (projectsTitle.textContent = 
+projectsTitle && (projectsTitle.textContent =
   projects.length === 0 ? 'No Projects' :
-  projects.length === 1 ? '1 Project' :
-  `${projects.length} Projects`
+    projects.length === 1 ? '1 Project' :
+      `${projects.length} Projects`
 );
 
 
@@ -102,7 +102,7 @@ let searchInput = document.querySelector('.searchBar');
 searchInput.addEventListener('change', (event) => {
   // Clear previous paths and legend (bug fix)
   renderPieChart(projects);
-  
+
   // Update query value
   query = event.target.value;
   // Filter the projects

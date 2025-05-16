@@ -50,7 +50,7 @@ ol {
   padding-inline-start: 2em;
 }
 
-li + li {
+li+li {
   margin-top: 0.2em;
 }
 
@@ -80,7 +80,7 @@ figure {
   background: oklch(from var(--color-accent) 50% 3% h);
 }
 
-figure > figcaption {
+figure>figcaption {
   font: 500 75% var(--font-sans);
   background: var(--color-foreground);
   padding: 0.5rem;
@@ -90,25 +90,23 @@ figure > figcaption {
   text-align: left;
 }
 
-figure > figcaption::before {
+figure>figcaption::before {
   content: 'Figure ' counter(figure) ': ';
   font-weight: bold;
   color: oklch(from var(--color-accent) 50% 3% h);
 }
 
-figure > figcaption a:not(:hover, :focus, :active) {
+figure>figcaption a:not(:hover, :focus, :active) {
   color: inherit;
   text-decoration: underline;
-  text-decoration-color: color-mix(
-    in lab,
-    currentColor,
-    transparent 70%
-  );
+  text-decoration-color: color-mix(in lab,
+      currentColor,
+      transparent 70%);
 }
 
 @media (max-width: 450px) {
   h1 {
-    font-size: clamp(1.8em, 5vw, 3em); 
+    font-size: clamp(1.8em, 5vw, 3em);
   }
 
   h2 {
@@ -124,16 +122,16 @@ figure > figcaption a:not(:hover, :focus, :active) {
     padding-inline-start: 1.5em;
   }
 
-  li + li {
+  li+li {
     margin-top: 0.15em;
   }
 
   main {
-    font-size: 95%; 
-    padding: 0.5rem 1rem; 
+    font-size: 95%;
+    padding: 0.5rem 1rem;
   }
 
-  figure > figcaption {
-    font-size: 90%; 
+  figure>figcaption {
+    font-size: 90%;
   }
 }

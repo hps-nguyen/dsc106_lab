@@ -24,7 +24,8 @@ header {
     gap: 0.5em;
 }
 
-header h2, header h3 {
+header h2,
+header h3 {
     margin: 0;
     color: var(--color-accent);
 }
@@ -33,6 +34,7 @@ header h2, header h3 {
 ul {
     list-style-type: none;
 }
+
 .skills {
     list-style-type: disc;
     margin: 0 2em;
@@ -75,7 +77,7 @@ time {
     section {
         gap: 1.5em;
     }
-    
+
     article {
         padding: 1em;
     }

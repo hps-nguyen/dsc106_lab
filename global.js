@@ -1,7 +1,7 @@
 console.log('IT’S ALIVE!');
 
 function $$(selector, context = document) {
-  return Array.from(context.querySelectorAll(selector));
+    return Array.from(context.querySelectorAll(selector));
 }
 
 
@@ -12,7 +12,7 @@ let pages = [
     { url: 'contact/', title: 'Contact' },
     { url: 'resume/', title: 'Resume' },
     { url: 'meta/', title: 'Meta' },
-    { url: 'dsc106/', title: 'DSC 106'},
+    { url: 'dsc106/', title: 'DSC 106' },
     { url: 'https://github.com/hps-nguyen', title: 'GitHub' },
 ];
 
