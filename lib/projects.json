@@ -1,5 +1,12 @@
 [
     {
+        "title": "Interactive Bike Station Traffic Explorer",
+        "url": "https://hps-nguyen.github.io/bike_traffic/",
+        "year": 2025,
+        "image": "../images/projects/bike-traffic.png",
+        "description": "Built an interactive web app to explore bike traffic patterns at various city stations. Aggregated and visualized hourly bike counts for each station, allowing users to compare traffic trends across locations and times of day. Enabled data-driven insights into urban mobility and station usage."
+    },
+    {
         "title": "Time Series Forecasting for Stock Prices",
         "year": 2025,
         "image": "https://images.unsplash.com/photo-1745270917331-787c80129680?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHN0b2NrJTIwcHJpY2VzfGVufDB8fDB8fHww",

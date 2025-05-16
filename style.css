@@ -168,6 +168,16 @@ form button:hover {
   color: oklch(from var(--color-accent) 50% 5% h);
 }
 
+.projects article a {
+  text-decoration: none;
+}
+
+.projects a:hover {
+  h2, h3 {
+    color: var(--color-accent);
+  }
+}
+
 .projects article img {
   max-width: 100%;
   aspect-ratio: 16 / 9;
