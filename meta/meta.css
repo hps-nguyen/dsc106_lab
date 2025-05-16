@@ -1,0 +1,144 @@
+@import url('../style.css');
+
+/* Stats */
+#stats {
+    margin-bottom: 4em;
+}
+
+dl.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 1fr);
+}
+
+.stats dt {
+    grid-row: 1;
+    font-size: 80%;
+    font-family: "Roboto Mono", "Source Code Pro", "IBM Plex Mono", monospace;
+}
+
+.stats dd {
+    grid-row: 2;
+    margin: 0;
+    text-align: left;
+    font-size: 150%;
+    font-family: "Fira Code", "Consolas", monospace;
+    color: var(--color-accent);
+}
+
+@media (max-width: 450px) {
+    dl.stats {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .stats dt,
+    .stats dd {
+        grid-row: auto;
+    }
+
+    .stats dt {
+        margin: auto 0 auto 2em;
+        text-align: left;
+    }
+}
+
+/* Gridline colors */
+.day {
+    stroke: #FFA500;
+    stroke-opacity: 0.5;
+}
+
+.night {
+    stroke: #1E3A8A;
+    stroke-opacity: 0.3;
+}
+
+
+
+/* Commit tooltip */
+dl.info {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 0.5em;
+    margin: 0;
+    align-items: center;
+    transition-duration: 500ms;
+    transition-property: opacity, visibility;
+}
+
+dl.info[hidden]:not(:hover, :focus-within) {
+    opacity: 0;
+    visibility: hidden;
+}
+
+dl.info dt {
+    font-size: 80%;
+    font-weight: bold;
+    color: var(--color-contrast);
+    text-align: right;
+}
+
+dl.info dd {
+    font-size: 90%;
+    color: var(--color-contrast);
+    margin: 0;
+    text-align: left;
+}
+
+.tooltip {
+    position: fixed;
+    top: 1em;
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 0.5px solid rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    padding: 0.5em;
+    box-shadow: 0 0.4em 0.4em rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+
+/* Scatter points */
+circle {
+    transition: 200ms;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+circle:hover {
+    transform: scale(1.5);
+}
+
+
+/* Brush */
+@keyframes marching-ants {
+    to {
+        stroke-dashoffset: -8;
+        /* 5 + 3 */
+    }
+}
+
+.selection {
+    fill-opacity: 0.1;
+    stroke: black;
+    stroke-opacity: 0.7;
+    stroke-dasharray: 5 3;
+    animation: marching-ants 2s linear infinite;
+}
+
+circle.selected {
+    fill: var(--color-accent);
+}
+
+
+/* Language breakdown */
+#language-breakdown {
+    margin-bottom: 4em;
+}
+
+#language-breakdown dt {
+    font-size: 90%;
+}
+
+#language-breakdown dd {
+    font-size: 120%;
+}
