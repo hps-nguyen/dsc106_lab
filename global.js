@@ -138,9 +138,16 @@ export function renderProjects(projects, containerElement, headingLevel = 'h2') 
         const titleHtml = project.url
             ? `<a href="${project.url}" target="_blank" rel="noopener"><${headingLevel}>${project.title}</${headingLevel}></a>`
             : `<${headingLevel}>${project.title}</${headingLevel}>`;
+
+        // Fix image path: use as-is if external, else prepend BASE_PATH
+        const imageSrc = project.image && project.image.startsWith('http')
+            ? project.image
+            : BASE_PATH + project.image;
+
         const imgHtml = project.url
-            ? `<a href="${project.url}" target="_blank" rel="noopener"><img src="${project.image}" alt="${project.title}" /></a>`
-            : `<img src="${project.image}" alt="${project.title}" />`;
+            ? `<a href="${project.url}" target="_blank" rel="noopener"><img src="${imageSrc}" alt="${project.title}" /></a>`
+            : `<img src="${imageSrc}" alt="${project.title}" />`;
+
         article.innerHTML = `
             ${titleHtml}
             ${imgHtml}

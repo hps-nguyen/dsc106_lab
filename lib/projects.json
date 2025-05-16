@@ -3,7 +3,7 @@
         "title": "Interactive Bike Station Traffic Explorer",
         "url": "https://hps-nguyen.github.io/bike_traffic/",
         "year": 2025,
-        "image": "../images/projects/bike-traffic.png",
+        "image": "images/projects/bike-traffic.png",
         "description": "Built an interactive web app to explore bike traffic patterns at various city stations. Aggregated and visualized hourly bike counts for each station, allowing users to compare traffic trends across locations and times of day. Enabled data-driven insights into urban mobility and station usage."
     },
     {
